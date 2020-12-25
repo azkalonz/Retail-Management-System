@@ -21,6 +21,10 @@ namespace Retail_Management_System.Controls
         }
         private void DashboardMenu_Load_1(object sender, EventArgs e)
         {
+            if(User.CurrentUser.UserType != "admin")
+            {
+                reportsbtn.Visible = false;
+            }
             try
             {
                 user_dropdown.Height = 0;

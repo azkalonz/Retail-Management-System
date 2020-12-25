@@ -29,21 +29,25 @@ namespace Retail_Management_System.Screens
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.currentCustomer2 = new Retail_Management_System.Controls.CurrentCustomer();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.inventory_quantity = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.productComboBox2 = new Retail_Management_System.Controls.ProductComboBox();
             this.product_price = new System.Windows.Forms.Label();
             this.product_name = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.quantityInput2 = new Retail_Management_System.Controls.QuantityInput();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
@@ -55,10 +59,6 @@ namespace Retail_Management_System.Screens
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.cart_total = new System.Windows.Forms.Label();
             this.dashboardMenu2 = new Retail_Management_System.Controls.DashboardMenu();
-            this.quantityInput2 = new Retail_Management_System.Controls.QuantityInput();
-            this.currentCustomer2 = new Retail_Management_System.Controls.CurrentCustomer();
-            this.productComboBox2 = new Retail_Management_System.Controls.ProductComboBox();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.panel1.SuspendLayout();
@@ -98,6 +98,24 @@ namespace Retail_Management_System.Screens
             this.guna2GroupBox2.TabIndex = 31;
             this.guna2GroupBox2.Text = "Select Customer";
             // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Red;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(68, 148);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(19, 18);
+            this.guna2CircleButton1.TabIndex = 27;
+            this.guna2CircleButton1.Text = "X";
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click_1);
+            // 
             // guna2Button2
             // 
             this.guna2Button2.BorderRadius = 10;
@@ -113,6 +131,15 @@ namespace Retail_Management_System.Screens
             this.guna2Button2.TabIndex = 26;
             this.guna2Button2.Text = "Purchase History";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click_1);
+            // 
+            // currentCustomer2
+            // 
+            this.currentCustomer2.BackColor = System.Drawing.Color.Transparent;
+            this.currentCustomer2.Location = new System.Drawing.Point(12, 48);
+            this.currentCustomer2.Name = "currentCustomer2";
+            this.currentCustomer2.Size = new System.Drawing.Size(301, 181);
+            this.currentCustomer2.TabIndex = 25;
+            this.currentCustomer2.CustomerChanged += new System.EventHandler(this.currentCustomer1_CustomerChanged);
             // 
             // guna2GroupBox1
             // 
@@ -152,6 +179,16 @@ namespace Retail_Management_System.Screens
             this.label1.TabIndex = 29;
             this.label1.Text = "Quantity:";
             // 
+            // productComboBox2
+            // 
+            this.productComboBox2.AutoSize = true;
+            this.productComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.productComboBox2.Location = new System.Drawing.Point(9, 55);
+            this.productComboBox2.Name = "productComboBox2";
+            this.productComboBox2.Size = new System.Drawing.Size(225, 60);
+            this.productComboBox2.TabIndex = 28;
+            this.productComboBox2.ProductChanged += new System.EventHandler(this.productComboBox1_ProductChanged_1);
+            // 
             // product_price
             // 
             this.product_price.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -187,8 +224,8 @@ namespace Retail_Management_System.Screens
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
             this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -197,24 +234,24 @@ namespace Retail_Management_System.Screens
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -274,6 +311,15 @@ namespace Retail_Management_System.Screens
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 30;
+            // 
+            // quantityInput2
+            // 
+            this.quantityInput2.BackColor = System.Drawing.Color.Transparent;
+            this.quantityInput2.Location = new System.Drawing.Point(26, 3);
+            this.quantityInput2.Name = "quantityInput2";
+            this.quantityInput2.Size = new System.Drawing.Size(126, 87);
+            this.quantityInput2.TabIndex = 0;
+            this.quantityInput2.QuantityChanged += new System.EventHandler(this.quantityInput1_QuantityChanged);
             // 
             // guna2Button6
             // 
@@ -415,56 +461,10 @@ namespace Retail_Management_System.Screens
             // 
             this.dashboardMenu2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.dashboardMenu2.BackColor = System.Drawing.Color.Transparent;
-            this.dashboardMenu2.Location = new System.Drawing.Point(783, 12);
+            this.dashboardMenu2.Location = new System.Drawing.Point(551, 12);
             this.dashboardMenu2.Name = "dashboardMenu2";
-            this.dashboardMenu2.Size = new System.Drawing.Size(256, 58);
+            this.dashboardMenu2.Size = new System.Drawing.Size(488, 58);
             this.dashboardMenu2.TabIndex = 26;
-            // 
-            // quantityInput2
-            // 
-            this.quantityInput2.BackColor = System.Drawing.Color.Transparent;
-            this.quantityInput2.Location = new System.Drawing.Point(26, 3);
-            this.quantityInput2.Name = "quantityInput2";
-            this.quantityInput2.Size = new System.Drawing.Size(126, 87);
-            this.quantityInput2.TabIndex = 0;
-            this.quantityInput2.QuantityChanged += new System.EventHandler(this.quantityInput1_QuantityChanged);
-            // 
-            // currentCustomer2
-            // 
-            this.currentCustomer2.BackColor = System.Drawing.Color.Transparent;
-            this.currentCustomer2.Location = new System.Drawing.Point(12, 48);
-            this.currentCustomer2.Name = "currentCustomer2";
-            this.currentCustomer2.Size = new System.Drawing.Size(301, 181);
-            this.currentCustomer2.TabIndex = 25;
-            this.currentCustomer2.CustomerChanged += new System.EventHandler(this.currentCustomer1_CustomerChanged);
-            // 
-            // productComboBox2
-            // 
-            this.productComboBox2.AutoSize = true;
-            this.productComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.productComboBox2.Location = new System.Drawing.Point(9, 55);
-            this.productComboBox2.Name = "productComboBox2";
-            this.productComboBox2.Size = new System.Drawing.Size(225, 60);
-            this.productComboBox2.TabIndex = 28;
-            this.productComboBox2.ProductChanged += new System.EventHandler(this.productComboBox1_ProductChanged_1);
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.Red;
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Location = new System.Drawing.Point(68, 148);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(19, 18);
-            this.guna2CircleButton1.TabIndex = 27;
-            this.guna2CircleButton1.Text = "X";
-            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click_1);
             // 
             // guna2VSeparator2
             // 
