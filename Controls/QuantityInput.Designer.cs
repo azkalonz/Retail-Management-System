@@ -38,11 +38,12 @@ namespace Retail_Management_System.Controls
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(142, 62);
+            this.label4.Location = new System.Drawing.Point(19, 62);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 25);
             this.label4.TabIndex = 32;
             this.label4.Text = "Quantity";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // product_quantity
             // 
@@ -66,7 +67,7 @@ namespace Retail_Management_System.Controls
             0});
             this.product_quantity.Name = "product_quantity";
             this.product_quantity.ShadowDecoration.Parent = this.product_quantity;
-            this.product_quantity.Size = new System.Drawing.Size(361, 56);
+            this.product_quantity.Size = new System.Drawing.Size(123, 56);
             this.product_quantity.TabIndex = 33;
             this.product_quantity.Value = new decimal(new int[] {
             1,
@@ -84,7 +85,7 @@ namespace Retail_Management_System.Controls
             this.Controls.Add(this.product_quantity);
             this.Controls.Add(this.label4);
             this.Name = "QuantityInput";
-            this.Size = new System.Drawing.Size(364, 87);
+            this.Size = new System.Drawing.Size(126, 87);
             this.Load += new System.EventHandler(this.QuantityInput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.product_quantity)).EndInit();
             this.ResumeLayout(false);

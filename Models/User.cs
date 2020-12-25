@@ -16,6 +16,7 @@ namespace Retail_Management_System.Models
         public int UserID;
         public string Username, Pass, FirstName, LastName, UserType, Description;
         public static User CurrentUser;
+        public List<SalesOrder> SalesOrders;
         public string Name 
         {
             get { return this.FirstName+ " "+this.LastName; }
@@ -23,6 +24,7 @@ namespace Retail_Management_System.Models
         }
         public User(OleDbDataReader user)
         {
+            SalesOrders = new List<SalesOrder>();
             this.Username = user["Username"].ToString();
             this.UserID = int.Parse(user["UserID"].ToString());
             this.Pass = user["Pass"].ToString();

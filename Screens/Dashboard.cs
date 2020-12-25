@@ -25,7 +25,7 @@ namespace Retail_Management_System.Screens
         {
             InitializeComponent();
             Theme.MaterialSkin.ApplyTheme(this);
-            dashboardMenu1.actions = actions;
+            dashboardMenu2.actions = actions;
             Products.Get();
             Customers.Get();
         }
@@ -45,18 +45,14 @@ namespace Retail_Management_System.Screens
             guna2DataGridView1.Columns[3].HeaderText = "Subtotal";
             guna2DataGridView1.Columns[4].HeaderText = "CartID";
             guna2DataGridView1.Columns[4].Visible = false;
+            EnableCustomerButtons(false);
         }
-
-        private void productComboBox1_ProductChanged(object sender, EventArgs e)
+        public void EnableCustomerButtons(bool status)
         {
-            Console.WriteLine("Test");
+            guna2Button2.Enabled = status;
+            guna2CircleButton1.Enabled = status;
         }
 
-        private void customerComboBox1_CustomerChanged(object sender, EventArgs e)
-        {
-            Console.WriteLine("Test2");
-
-        }
         private void GoFullscreen(bool fullscreen)
         {
             if (fullscreen)
@@ -80,26 +76,40 @@ namespace Retail_Management_System.Screens
 
         private void productComboBox1_ProductChanged_1(object sender, EventArgs e)
         {
-            quantityInput1.SetQuantity(1);
+            ResetProducts();
+        }
+        public void ResetProducts()
+        {
+            quantityInput2.SetQuantity(1);
             product_name.Text = Products.SelectedProduct.ProductName;
+            inventory_quantity.Text = Products.SelectedProduct.Quantity.ToString();
             product_price.Text = "PHP " + Products.SelectedProduct.Price.ToString("N2");
         }
 
         private void quantityInput1_QuantityChanged(object sender, EventArgs e)
         {
-            Console.WriteLine(quantityInput1.Quantity);
+            Console.WriteLine(quantityInput2.Quantity);
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            var ProductName = Products.SelectedProduct.ProductName;
-            var Price = Products.SelectedProduct.Price;
-            var Quantity = quantityInput1.Quantity;
-            float total = Quantity * Price;
+            if (Products.SelectedProduct != null)
+            {
+                if(Products.SelectedProduct.Quantity >= quantityInput2.Quantity)
+                {
+                    var ProductName = Products.SelectedProduct.ProductName;
+                    var Price = Products.SelectedProduct.Price;
+                    var Quantity = quantityInput2.Quantity;
+                    float total = Quantity * Price;
 
-            var cartId = Cart.AddToCart((Product)Products.SelectedProduct.Clone(), Quantity);
-            guna2DataGridView1.Rows.Add(ProductName, Price, Quantity, total, cartId);
-            cart_total.Text = "PHP "+ Cart.Total.ToString("N2");
+                    var cartId = Cart.AddToCart((Product)Products.SelectedProduct.Clone(), Quantity);
+                    guna2DataGridView1.Rows.Add(ProductName, Price, Quantity, total, cartId);
+                    cart_total.Text = "PHP " + Cart.Total.ToString("N2");
+                } else
+                {
+                    MessageBox.Show("Insufficient quantity");
+                }
+            }
         }
         private void guna2DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -112,7 +122,7 @@ namespace Retail_Management_System.Screens
                 {
                     product_name.Text = product.ProductName;
                     product_price.Text = "PHP " + product.Price.ToString("N2");
-                    quantityInput1.SetQuantity(product.CartQuantity);
+                    quantityInput2.SetQuantity(product.CartQuantity);
                 }
             }
         }
@@ -135,7 +145,7 @@ namespace Retail_Management_System.Screens
                 if (product != null)
                 {
                     Cart.RemoveToCart(product);
-                    quantityInput1.SetQuantity(1);
+                    quantityInput2.SetQuantity(1);
                     guna2DataGridView1.Rows.Remove(row);
                     cart_total.Text = "PHP "+ Cart.Total.ToString("N2");
                 }
@@ -169,6 +179,19 @@ namespace Retail_Management_System.Screens
                     int id = (int)salesOrder["data"]["SalesID"];
                     foreach(Product product in Cart.list)
                     {
+                        Product productRef = Products.collection.Find(item => item.ProductID == product.ProductID);
+                        if (productRef != null)
+                        {
+                            productRef.Quantity -= product.CartQuantity;
+                            ResetProducts();
+                            command = "UPDATE Products SET [Quantity] = @quantity WHERE [ProductID] = @product";
+                            parameters = new OleDbParameter[]
+                            {
+                                new OleDbParameter("@quantity", productRef.Quantity),
+                                new OleDbParameter("@product", productRef.ProductID),
+                            };
+                            Connection.NonQuery(command, parameters);
+                        }
                         float subtotal = product.CartQuantity * product.Price;
                         command = "INSERT INTO SalesOrderDetail([SalesID], [ProductID], [Quantity], [SubTotal]) VALUES (@id,@product,@quantity,@subtotal)";
                         parameters = new OleDbParameter[]
@@ -211,11 +234,24 @@ namespace Retail_Management_System.Screens
             form.parent = this;
             form.ShowDialog();
         }
+        private void currentCustomer1_CustomerChanged(object sender, EventArgs e)
+        {
+            if (User.SelectedUser != null)
+            {
+                EnableCustomerButtons(true);
+            }
+        }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void guna2Button2_Click_1(object sender, EventArgs e)
         {
             CustomerPurchases form = new CustomerPurchases();
             form.Show();
+        }
+
+        private void guna2CircleButton1_Click_1(object sender, EventArgs e)
+        {
+            currentCustomer1.Reset();
+            EnableCustomerButtons(false);
         }
     }
 }

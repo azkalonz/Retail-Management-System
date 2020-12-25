@@ -47,7 +47,6 @@ namespace Retail_Management_System.Controls
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             Products.SelectedProduct = (Product)(comboBox2.SelectedItem);
-            price.Text = "PHP " + Products.SelectedProduct.Price.ToString("N2");
             OnProductChanged(EventArgs.Empty);
         }
 

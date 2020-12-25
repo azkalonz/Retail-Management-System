@@ -37,11 +37,15 @@ namespace Retail_Management_System.Controls
 
             }
         }
-
-        private void CurrentCustomer_Load(object sender, EventArgs e)
+        public void Reset()
         {
             user_name.Text = "Select a customer";
             user_id.Text = "0";
+            customerComboBox1.Reset();
+        }
+        private void CurrentCustomer_Load(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }

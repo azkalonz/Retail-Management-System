@@ -48,5 +48,9 @@ namespace Retail_Management_System.Controls
             User.SelectedUser = (User)(comboBox1.SelectedItem);
             OnCustomerChanged(EventArgs.Empty);
         }
+        public void Reset()
+        {
+            comboBox1.SelectedIndex = -1;
+        }
     }
 }

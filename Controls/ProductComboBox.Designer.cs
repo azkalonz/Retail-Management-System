@@ -31,7 +31,6 @@ namespace Retail_Management_System.Controls
         {
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.price = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBox2
@@ -54,27 +53,16 @@ namespace Retail_Management_System.Controls
             this.label2.TabIndex = 3;
             this.label2.Text = "Product";
             // 
-            // price
-            // 
-            this.price.AutoSize = true;
-            this.price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price.Location = new System.Drawing.Point(3, 57);
-            this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(76, 20);
-            this.price.TabIndex = 4;
-            this.price.Text = "PHP 0.00";
-            // 
             // ProductComboBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.price);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox2);
             this.Name = "ProductComboBox";
-            this.Size = new System.Drawing.Size(277, 77);
+            this.Size = new System.Drawing.Size(277, 65);
             this.Load += new System.EventHandler(this.ProductComboBox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -84,6 +72,5 @@ namespace Retail_Management_System.Controls
         #endregion
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label price;
     }
 }

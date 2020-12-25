@@ -38,5 +38,10 @@ namespace Retail_Management_System.Controls
             Quantity = quantity;
             product_quantity.Value = quantity;
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
