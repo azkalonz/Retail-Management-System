@@ -250,7 +250,7 @@ namespace Retail_Management_System.Screens
 
         private void guna2CircleButton1_Click_1(object sender, EventArgs e)
         {
-            currentCustomer1.Reset();
+            currentCustomer2.Reset();
             EnableCustomerButtons(false);
         }
     }

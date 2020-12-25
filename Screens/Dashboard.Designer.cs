@@ -468,6 +468,8 @@ namespace Retail_Management_System.Screens
             // 
             // guna2VSeparator2
             // 
+            this.guna2VSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2VSeparator2.Location = new System.Drawing.Point(621, 73);
             this.guna2VSeparator2.Name = "guna2VSeparator2";
             this.guna2VSeparator2.Size = new System.Drawing.Size(10, 532);
@@ -475,6 +477,8 @@ namespace Retail_Management_System.Screens
             // 
             // guna2VSeparator1
             // 
+            this.guna2VSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2VSeparator1.Location = new System.Drawing.Point(415, 73);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 532);
