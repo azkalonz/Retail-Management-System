@@ -38,8 +38,8 @@ namespace Retail_Management_System.Controls
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.reportsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.reportsbtn = new Guna.UI2.WinForms.Guna2Button();
             this.user_dropdown.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -127,6 +127,15 @@ namespace Retail_Management_System.Controls
             this.guna2Panel1.Size = new System.Drawing.Size(131, 52);
             this.guna2Panel1.TabIndex = 5;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.reportsbtn);
+            this.guna2Panel2.Location = new System.Drawing.Point(11, 3);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(131, 52);
+            this.guna2Panel2.TabIndex = 6;
+            // 
             // reportsbtn
             // 
             this.reportsbtn.BorderRadius = 10;
@@ -142,15 +151,7 @@ namespace Retail_Management_System.Controls
             this.reportsbtn.Size = new System.Drawing.Size(116, 23);
             this.reportsbtn.TabIndex = 4;
             this.reportsbtn.Text = "REPORTS";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.reportsbtn);
-            this.guna2Panel2.Location = new System.Drawing.Point(11, 3);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(131, 52);
-            this.guna2Panel2.TabIndex = 6;
+            this.reportsbtn.Click += new System.EventHandler(this.reportsbtn_Click);
             // 
             // DashboardMenu
             // 

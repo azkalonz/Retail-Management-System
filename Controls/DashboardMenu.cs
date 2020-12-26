@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Retail_Management_System.Models;
+using Retail_Management_System.Screens;
 
 namespace Retail_Management_System.Controls
 {
@@ -62,6 +63,12 @@ namespace Retail_Management_System.Controls
         private void name_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void reportsbtn_Click(object sender, EventArgs e)
+        {
+            Reports form = new Reports();
+            form.Show();
         }
     }
 }
