@@ -163,5 +163,16 @@ namespace Retail_Management_System.Screens
         {
             LoadUsers(true, username.Text);
         }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            firstname_lastname.Text = "Select a user";
+            userid.Text = "0";
+            username.Text = "";
+            firstname.Text = "";
+            lastname.Text = "";
+            password.Text = "";
+            usertype.SelectedIndex = 0;
+        }
     }
 }
