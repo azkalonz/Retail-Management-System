@@ -461,9 +461,9 @@ namespace Retail_Management_System.Screens
             // 
             this.dashboardMenu2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.dashboardMenu2.BackColor = System.Drawing.Color.Transparent;
-            this.dashboardMenu2.Location = new System.Drawing.Point(551, 12);
+            this.dashboardMenu2.Location = new System.Drawing.Point(431, 12);
             this.dashboardMenu2.Name = "dashboardMenu2";
-            this.dashboardMenu2.Size = new System.Drawing.Size(488, 58);
+            this.dashboardMenu2.Size = new System.Drawing.Size(608, 58);
             this.dashboardMenu2.TabIndex = 26;
             // 
             // guna2VSeparator2

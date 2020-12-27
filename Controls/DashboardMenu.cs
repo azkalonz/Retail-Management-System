@@ -25,6 +25,7 @@ namespace Retail_Management_System.Controls
             if(User.CurrentUser.UserType != "admin")
             {
                 reportsbtn.Visible = false;
+                users.Visible = false;
             }
             try
             {
@@ -69,6 +70,12 @@ namespace Retail_Management_System.Controls
         {
             Reports form = new Reports();
             form.Show();
+        }
+
+        private void users_Click(object sender, EventArgs e)
+        {
+            Users form = new Users();
+            form.ShowDialog();
         }
     }
 }

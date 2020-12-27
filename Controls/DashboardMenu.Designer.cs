@@ -40,10 +40,13 @@ namespace Retail_Management_System.Controls
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.reportsbtn = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.users = new Guna.UI2.WinForms.Guna2Button();
             this.user_dropdown.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // user_dropdown
@@ -52,7 +55,7 @@ namespace Retail_Management_System.Controls
             this.user_dropdown.BackColor = System.Drawing.Color.Gainsboro;
             this.user_dropdown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.user_dropdown.Controls.Add(this.logout_button);
-            this.user_dropdown.Location = new System.Drawing.Point(250, 66);
+            this.user_dropdown.Location = new System.Drawing.Point(404, 66);
             this.user_dropdown.Name = "user_dropdown";
             this.user_dropdown.Size = new System.Drawing.Size(217, 45);
             this.user_dropdown.TabIndex = 3;
@@ -79,7 +82,7 @@ namespace Retail_Management_System.Controls
             this.name.BackColor = System.Drawing.Color.Transparent;
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.Color.White;
-            this.name.Location = new System.Drawing.Point(285, 0);
+            this.name.Location = new System.Drawing.Point(439, 0);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(165, 55);
             this.name.TabIndex = 0;
@@ -91,6 +94,7 @@ namespace Retail_Management_System.Controls
             // 
             this.guna2Button1.BorderRadius = 10;
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.Maroon;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -112,16 +116,17 @@ namespace Retail_Management_System.Controls
             this.flowLayoutPanel1.Controls.Add(this.name);
             this.flowLayoutPanel1.Controls.Add(this.guna2Panel1);
             this.flowLayoutPanel1.Controls.Add(this.guna2Panel2);
+            this.flowLayoutPanel1.Controls.Add(this.guna2Panel3);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(453, 55);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(607, 55);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Location = new System.Drawing.Point(148, 3);
+            this.guna2Panel1.Location = new System.Drawing.Point(302, 3);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(131, 52);
@@ -130,7 +135,7 @@ namespace Retail_Management_System.Controls
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.reportsbtn);
-            this.guna2Panel2.Location = new System.Drawing.Point(11, 3);
+            this.guna2Panel2.Location = new System.Drawing.Point(165, 3);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(131, 52);
@@ -140,6 +145,7 @@ namespace Retail_Management_System.Controls
             // 
             this.reportsbtn.BorderRadius = 10;
             this.reportsbtn.CheckedState.Parent = this.reportsbtn;
+            this.reportsbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reportsbtn.CustomImages.Parent = this.reportsbtn;
             this.reportsbtn.FillColor = System.Drawing.Color.DodgerBlue;
             this.reportsbtn.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -153,6 +159,33 @@ namespace Retail_Management_System.Controls
             this.reportsbtn.Text = "REPORTS";
             this.reportsbtn.Click += new System.EventHandler(this.reportsbtn_Click);
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Controls.Add(this.users);
+            this.guna2Panel3.Location = new System.Drawing.Point(28, 3);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
+            this.guna2Panel3.Size = new System.Drawing.Size(131, 52);
+            this.guna2Panel3.TabIndex = 7;
+            // 
+            // users
+            // 
+            this.users.BorderRadius = 10;
+            this.users.CheckedState.Parent = this.users;
+            this.users.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.users.CustomImages.Parent = this.users;
+            this.users.FillColor = System.Drawing.Color.DodgerBlue;
+            this.users.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.users.ForeColor = System.Drawing.Color.White;
+            this.users.HoverState.Parent = this.users;
+            this.users.Location = new System.Drawing.Point(4, 14);
+            this.users.Name = "users";
+            this.users.ShadowDecoration.Parent = this.users;
+            this.users.Size = new System.Drawing.Size(116, 23);
+            this.users.TabIndex = 4;
+            this.users.Text = "USERS";
+            this.users.Click += new System.EventHandler(this.users_Click);
+            // 
             // DashboardMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,12 +195,13 @@ namespace Retail_Management_System.Controls
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.user_dropdown);
             this.Name = "DashboardMenu";
-            this.Size = new System.Drawing.Size(467, 61);
+            this.Size = new System.Drawing.Size(621, 61);
             this.Load += new System.EventHandler(this.DashboardMenu_Load_1);
             this.user_dropdown.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -183,5 +217,7 @@ namespace Retail_Management_System.Controls
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button reportsbtn;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Button users;
     }
 }

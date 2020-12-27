@@ -209,6 +209,12 @@
     <Compile Include="Screens\TenderedAmount.Designer.cs">
       <DependentUpon>TenderedAmount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="State\Cart.cs" />
     <Compile Include="State\Customers.cs" />
     <Compile Include="State\Products.cs" />
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\TenderedAmount.resx">
       <DependentUpon>TenderedAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
