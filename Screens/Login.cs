@@ -25,7 +25,24 @@ namespace Retail_Management_System.Screens
 
         private void loginControl1_Load(object sender, EventArgs e)
         {
+        }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ResetAdmin form = new ResetAdmin();
+            form.onDispose = success =>
+            {
+                if (success)
+                {
+                    Connection.NonQuery("UPDATE [Users] SET [Username] = 'admin', [Pass] = 'admin' WHERE [Username] = 'admin' ");
+                    MessageBox.Show("Username: admin\nPassword: admin");
+                } else
+                {
+                    MessageBox.Show("Reset Password failed");
+                }
+                return true;
+            };
+            form.ShowDialog();
         }
     }
 }

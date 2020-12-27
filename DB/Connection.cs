@@ -10,7 +10,7 @@ namespace Retail_Management_System.DB
 {
     class Connection
     {
-        static String connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+Application.StartupPath+"\\DB\\retail_management_system.accdb";
+        static String connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\retail_management_system.accdb;Persist Security Info=True";
         public static string ErrorMessage = "";
 
         public static OleDbConnection GetConnection()
